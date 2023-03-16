@@ -45,5 +45,12 @@ function gameOutOfFive() {
 
 }
 
-    console.log("Your Score is : " + playerScore + ". Your opponents score is " + computerScore);
+    if (playerScore < computerScore) {
+    console.log("You lose. Your Score is: " + playerScore + ". Your opponents score is: " + computerScore + ".");
+    } else if (playerScore > computerScore) {
+        console.log("You Win. Your Score is: " + playerScore + ". Your opponents score is: " + computerScore + ".");
+    } else {
+        console.log("You tied. Your Score is: " + playerScore + ". Your opponents score is: " + computerScore + ".");
+    }
 }
+
