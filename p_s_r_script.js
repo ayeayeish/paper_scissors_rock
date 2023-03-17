@@ -19,6 +19,7 @@ function gameOutOfFive() {
 
     let playerSelection = prompt("Pick PAPER, SCISSORS, or ROCK");
     let computerSelection = getComputerChoice();
+    playerSelection = playerSelection.toUpperCase();
 
         
     if (playerSelection === computerSelection) {
