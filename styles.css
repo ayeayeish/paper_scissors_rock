@@ -1,0 +1,94 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sections {
+    flex: 1;
+}
+
+.heading-psr {
+    display: flex;
+    flex-direction: row;
+    height: 33.33%;
+    max-width: 100%;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207,226,243);
+}
+
+.heading-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255,229,153);
+    padding: 20px 50px;
+    border-radius: 15px;
+    border: 0.5px black solid;
+}
+
+.game-section-psr {
+    display: flex;
+    flex-direction: row;
+    height: 33.33%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(246,178,107);
+}
+
+.score-section-psr {
+    display: flex;
+    flex-direction: column;
+    height: 33.33%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207,226,243);
+}
+
+
+.score-type-header {
+    display: flex;
+    flex-direction: row;
+}
+
+#player-score {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#computer-score {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+button {
+    height: 30%;
+    width: 10%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    background-color: rgb(182,215,168);
+    color: black;
+    border: 0.5px black solid;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255,229,153);
+    transition-duration: 0.3s;
+}
+
