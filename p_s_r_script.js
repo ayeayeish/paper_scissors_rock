@@ -31,6 +31,8 @@ function getComputerChoice() { // Computer Choice Function
 const updatePlayerScore = document.querySelector(".update-player");
 const updateComputerScore = document.querySelector(".update-computer");
 
+const changeAlert = document.querySelector(".alert");
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -38,7 +40,7 @@ let computerScore = 0;
     let computerSelection = getComputerChoice();
     
     if (playerSelection === computerSelection) {
-      alert("Computer Picked " + computerSelection + ", you picked " + playerSelection + ". You tied!");
+      changeAlert.textContent = ("Computer Picked " + computerSelection + ", you picked " + playerSelection + ". You tied!");
     }
   
     if (
@@ -46,7 +48,7 @@ let computerScore = 0;
       (playerSelection === "SCISSORS" && computerSelection === "PAPER") ||
       (playerSelection === "PAPER" && computerSelection === "ROCK")
     ) {
-      alert("Computer Picked " + computerSelection + ", you picked " + playerSelection + ". You are the winner!");
+      changeAlert.textContent = ("Computer Picked " + computerSelection + ", you picked " + playerSelection + ". You are the winner!");
       playerScore++;
       updatePlayerScore.textContent = playerScore;
     }
@@ -56,7 +58,7 @@ let computerScore = 0;
       (playerSelection === "PAPER" && computerSelection === "SCISSORS") ||
       (playerSelection === "ROCK" && computerSelection === "PAPER")
     ) {
-      alert("Computer Picked " + computerSelection + ", you picked " + playerSelection + ". You are the loser!");
+      changeAlert.textContent = ("Computer Picked " + computerSelection + ", you picked " + playerSelection + ". You are the loser!");
       computerScore++;
       updateComputerScore.textContent = computerScore;
     }
@@ -65,6 +67,7 @@ let computerScore = 0;
       alert("Game over - you scored 5, computer scored " + computerScore + " - you are the winner!");
       updateComputerScore.textContent = 0;
       updatePlayerScore.textContent = 0;
+      changeAlert.textContent = "Click a button, you know you want to!";
       playerScore = 0;
       computerScore = 0;
     }
@@ -73,6 +76,7 @@ let computerScore = 0;
       alert("Game over - computer scored 5, you scored " + playerScore + " - you are the loser!");
       updateComputerScore.textContent = 0;
       updatePlayerScore.textContent = 0;
+      changeAlert.textContent = "Click a button, you know you want to!";
       playerScore = 0;
       computerScore = 0;
     }
